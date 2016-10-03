@@ -16,7 +16,9 @@
     "posttest": "remap-istanbul -i coverage/json/coverage-final.json -o coverage/html -t html",
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
-    "postinstall": "npm run webdriver-update"
+    "postinstall": "npm run webdriver-update",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "dependencies": {
     "@angular/common": "2.0.1",
@@ -53,6 +55,7 @@
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "gh-pages-deploy": "^0.4.2",
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "^2.8.1",
     "istanbul-instrumenter-loader": "^0.2.0",
